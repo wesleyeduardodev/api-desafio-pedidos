@@ -5,16 +5,11 @@ import br.com.desafio.pedidos.dto.FornecedorDTO;
 import br.com.desafio.pedidos.dto.PrecoDTO;
 import br.com.desafio.pedidos.exceptions.IndisponivelException;
 import br.com.desafio.pedidos.integracao.FonecedorStrategy;
-import br.com.desafio.pedidos.configuration.EnvironmentConfiguration;
-import br.com.desafio.pedidos.integracao.MockFornecedorResource;
-import br.com.desafio.pedidos.integracao.FornecedorResource;
-import br.com.desafio.pedidos.enums.EnvironmentTypes;
 import br.com.desafio.pedidos.model.Fornecedor;
 import br.com.desafio.pedidos.repository.FornecedorRepository;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,15 +23,8 @@ public class FornecedorService {
     CacheStore<Fornecedor> cacheFornecedor;
 
     @Autowired
-    private MockFornecedorResource mockFornecedorResource;
+    FonecedorStrategy fonecedorStrategy;
 
-    @Autowired
-    private FornecedorResource fornecedorResource;
-
-    @Autowired
-    private EnvironmentConfiguration environmentConfiguration;
-
-    @Transactional
     public Fornecedor criarFornecedor(Fornecedor fornecedorParaSalvar) {
         Fornecedor fornecedorSalvo;
         Fornecedor fornecedorCache = cacheFornecedor.get(fornecedorParaSalvar.getCnpj());
@@ -53,7 +41,7 @@ public class FornecedorService {
     }
 
     public FornecedorDTO buscarMelhorFornecedorParaUmPedido(PedidoRequest pedidoRequest) throws IndisponivelException {
-        List<FornecedorDTO> fornecedoresProduto = getFonecedorStrategy().buscarFornecedores(pedidoRequest.getGtin());
+        List<FornecedorDTO> fornecedoresProduto = fonecedorStrategy.buscarFornecedores(pedidoRequest.getGtin());
         FornecedorDTO melhorFornecedorParaOProduto = null;
         if (CollectionUtils.isNotEmpty(fornecedoresProduto)) {
             melhorFornecedorParaOProduto = buscarMelhorFornecedorComBaseNaQuantidadeMinimaDoPedido(pedidoRequest.getQuantidade(), fornecedoresProduto);
@@ -81,15 +69,5 @@ public class FornecedorService {
 
     private void removerPrecosQueNaoAtendemAQuantidadeMinimaSolicitadaNoPedido(Integer quantidadeMinimaSolicitada, List<PrecoDTO> precos) {
         precos.removeIf(preco -> quantidadeMinimaSolicitada < preco.getQuantidadeMinima());
-    }
-
-    private FonecedorStrategy getFonecedorStrategy() {
-        FonecedorStrategy fonecedorStrategy;
-        if (environmentConfiguration.getEnvironmentType().equals(EnvironmentTypes.TEST)) {
-            fonecedorStrategy = mockFornecedorResource;
-        } else {
-            fonecedorStrategy = fornecedorResource;
-        }
-        return fonecedorStrategy;
     }
 }
