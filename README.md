@@ -39,7 +39,7 @@ Você deve desenvolver um sistema para realizar **pedidos** a partir de uma list
 
 Os produtos **já estão cadastrados** e possuem 2 atributos: GTIN (código de barra) e nome.
 
-Quando o usuário digitar a quantidade de cada produto e clicar no botão Enviar, o sistema deverá chamar a API https://egf1amcv33.execute-api.us-east-1.amazonaws.com/dev/produto/{gtin} informando o GTIN de cada produto. O retorno da API será uma lista de **fornecedores** e dentro de cada fornecedor uma lista de **preços** de acordo com a **quantidade mínima** para compra. Não é obrigatório informar a quantidade para todos os produtos.
+Quando o usuário digitar a quantidade de cada produto e clicar no botão Enviar, o sistema deverá chamar a API "URL da API Externa" informando o GTIN de cada produto. O retorno da API será uma lista de **fornecedores** e dentro de cada fornecedor uma lista de **preços** de acordo com a **quantidade mínima** para compra. Não é obrigatório informar a quantidade para todos os produtos.
 
 Veja um exemplo do retorno da API externa para o GTIN 7894900011517:
 ```json
