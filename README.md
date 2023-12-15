@@ -8,6 +8,7 @@
 ## Para fazer
 - Criar aquivo de propriedades para test e criar coposer para ambiente de testes
 - Inserir dados nas tabelas usando arquivo data.sql ao subir a apliacao
+- Ajustar testes unitários
 
 ## Links úteis da aplicação
 
