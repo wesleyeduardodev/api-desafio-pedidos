@@ -12,9 +12,6 @@ import java.math.BigDecimal;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(of = {"preco", "quantidadeMinima"})
 public class PrecoDTO {
-
     private BigDecimal preco;
-
-    @JsonProperty(value = "quantidade_minima")
     private Integer quantidadeMinima;
 }

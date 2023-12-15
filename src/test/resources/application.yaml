@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pedidos
+    username: postgres
+    password: root
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#fornecedor:
+#  api:
+ #   user: admin
+  #  password: admin
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    path: "/fornecedor-api/swagger-ui.html"
