@@ -5,6 +5,10 @@
 - Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
 - Na raiz do projeto, executar: docker compose -f docker-compose-test.yml up -d 
 
+## Para fazer
+- Criar aquivo de propriedades para test e criar coposer para ambiente de testes
+- Inserir dados nas tabelas usando arquivo data.sql ao subir a apliacao
+
 ## Links úteis da aplicação
 
 - Dados de login: user: admin e senha: admin
