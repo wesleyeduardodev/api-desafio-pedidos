@@ -1,4 +1,10 @@
 
+## Configuração da API Externa
+- Ter o docker instalado e configurado
+- fazer o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
+- Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
+- Na raiz do projeto, executar: docker compose -f docker-compose-test.yml up -d 
+
 ## Links úteis da aplicação
 
 - Dados de login: user: admin e senha: admin
