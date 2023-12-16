@@ -37,6 +37,7 @@ basic:
 base:
   url:
     fornecedor: http://localhost:81/api/fornecedores/produtos/
+    #fornecedor: http://fornecedores-api:81/api/fornecedores/produtos/
 
 path:
   resourse:
