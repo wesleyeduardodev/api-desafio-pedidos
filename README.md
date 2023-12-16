@@ -4,6 +4,8 @@
 - fazer o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
 - Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
 - Na raiz do projeto, executar: docker compose -f docker-compose-test.yml up -d 
+
+## Outros comandos
 - Remover todos os containers: docker rm $(docker ps -a -q) -f
 - Remover todos as imagens: docker rmi $(docker images -q) -f
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true)
