@@ -42,3 +42,8 @@ mensagem:
   erro:
     negocial:
       fornecedor: Nenhum fornecedor encontrado para a quantidade solicitada do produto
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    path: "/pedidos-api/swagger-ui.html"
