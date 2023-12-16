@@ -28,6 +28,25 @@ spring:
     init:
       mode: always
 
+basic:
+  auth:
+    user: admin
+    password: admin
+    roles: admin
+
+base:
+  url:
+    fornecedor: http://localhost:81/api/fornecedores/produtos/
+
+path:
+  resourse:
+    json: src/main/resources/json/
+
+mensagem:
+  erro:
+    negocial:
+      fornecedor: Nenhum fornecedor encontrado para a quantidade solicitada do produto
+
 springdoc:
   swagger-ui:
     operations-sorter: method

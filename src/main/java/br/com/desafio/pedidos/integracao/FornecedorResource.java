@@ -28,6 +28,7 @@ public class FornecedorResource implements FonecedorStrategy {
         try {
             String url = this.baseUrlFornecedor.concat(gtin);
             log.info("Acessando API fornecedores...");
+            log.info("URL: " + url);
             List<FornecedorDTO> fornecedores = Arrays.asList(Objects.requireNonNull(restTemplate.getForObject(url, FornecedorDTO[].class)));
             log.info(CollectionUtils.size(fornecedores) + " fonecedor(es) encontrado(s) para o código de barras " + gtin);
             return fornecedores;
