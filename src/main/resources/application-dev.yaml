@@ -8,7 +8,7 @@ spring:
   config:
     activate:
       on-profile:
-        - prod
+        - dev
 
   datasource:
     url: jdbc:postgresql://postgres-db:5432/pedidos?currentSchema=public
@@ -36,8 +36,7 @@ basic:
 
 base:
   url:
-    fornecedor: http://localhost:81/api/fornecedores/produtos/
-    #fornecedor: http://fornecedores-api:81/api/fornecedores/produtos/
+    fornecedor: http://fornecedores-api:3000/api/fornecedores/produtos/
 
 path:
   resourse:
