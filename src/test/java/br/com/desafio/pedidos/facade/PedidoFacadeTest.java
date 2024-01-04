@@ -21,3 +21,4 @@ public class PedidoFacadeTest {
         Assertions.assertThrows(NegocioException.class, () -> pedidoFacade.criarPedidos(new ArrayList<>()));
     }
 }
+

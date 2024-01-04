@@ -14,3 +14,4 @@ public class FormatadorUtilsTest {
         Assertions.assertTrue(StringUtils.isNumeric(FormatadorUtil.removerCaracteresNaoNumericos(cnpj)));
     }
 }
+

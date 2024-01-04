@@ -32,3 +32,4 @@ public class FornecedorRepositotyTest {
         assertThat(Objects.nonNull(fornecedor.getId())).isTrue();
     }
 }
+

@@ -68,3 +68,4 @@ public class PedidoServiceTest {
         Assertions.assertThrows(NegocioException.class, () -> pedidoService.criarPedidos(Collections.singletonList(pedidoRequest)));
     }
 }
+
