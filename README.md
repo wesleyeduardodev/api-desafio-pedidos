@@ -1,11 +1,11 @@
 
 ## Requisitos Gerais
-- Docker/WSL2 instalado e configurado
+- Docker/WSL2 instalado e configurado no ambiente Windows
 - Java 17 configurado nas variáveis de ambiente do Windows
 - Maven 3+ configurado nas variáveis de ambiente do Windows
 
 ## Configuração da API Externa de Fornecedores de um Produto
-- fazer o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
+- Realizar o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
 - Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
 - Abrir um terminal na pasta raiz do projeto
 - Executar o comando "docker build -t wesleyeduardodev/fornecedores-api:latest ." para gerar imagem da aplicação
@@ -15,7 +15,7 @@
 - Executar comando "mvn clean install -Dmaven.test.skip=true" para gerar o target do projeto. (Será gerado jar sem executar o testes unitarios - Alguns testes estão com falha após mudar o banco da aplicação de H2 para Postgres. Isso será resolvido em breve e os testes unitário e de integração voltarão a funcionar)
 - Ainda com o terminal na raiz do projeto, executar o comando "docker compose -f docker-compose-test.yml up -d" (Criar as imagens e subir todos os containers)
 - Obs: Caso ocorra problemas ao subir todos os container de forma simultanea basta subir um container de cada vez. (As vezes pode ocorrer problemas onde um container precisa de outro que ainda não subiu totalmente - Isso será resolvido posteriormente usando o recurso "wait-for-it")
-- Ao rodar a API de Fornecedores é necessário ter cadastrado pelo menos alguns forncedores para um produto
+- Ao rodar a API de Fornecedores é necessário ter cadastrado pelo menos alguns fornecedores para um produto
 - Alternativa 1: Abra o Postman, crie ums requisição do tipo POST (http://localhost:81/api/fornecedores/produtos) e insira o body abaixo:
 ```json
 {
@@ -45,6 +45,8 @@
 }
 ```
 - Execute a requisição. Isso irá criar 2 Fornecedores para o produto de código de barras 7894900011517
+- Alternativa 2: Abri o Swagger do projeto da API de fornecedores: http://localhost:81/fornecedores-api/swagger-ui/index.html
+- Procurar pelo Metodo POST, colar o JSON acima e executar
 
 ## Links para uso da aplicação
 - Dados de login para autenticação básica: user: admin e senha: admin
