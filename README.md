@@ -1,44 +1,31 @@
 
-## Configuração da API Externa
-- Ter o docker instalado e configurado
+## Requisitos Gerais
+- Docker/WSL2 instalado e configurado
+- Java 17
+- Maven 3+
+
+## Configuração da API Externa de Fornecedores de um Produto
 - fazer o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
 - Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
-- Na raiz do projeto, executar: docker compose -f docker-compose-test.yml up -d 
+- Abrir um terminal na pasta raiz do projeto
+- Executar o comando "docker build -t wesleyeduardodev/fornecedores-api:latest ." para gerar imagem da aplicação
 
-## Outros comandos
+## Executar o Projeto API de Pedidos
+- Abrir um terminal na pasta raiz do projeto
+- Executar comando "mvn clean install" para gerar o target do projeto
+- Ainda com o terminal na raiz do projeto, executar o comando "docker compose -f docker-compose-test.yml up -d" (Criar as imagens e subir todos os containers)
+- Obs: Caso ocorra problemas ao subir todos os container de forma simultanea basta subir um container de cada vez. (As vezes pode ocorrer problemas onde um container precisa de outro que ainda não subiu totalmente - Isso será resolvido posteriormente usando o recurso "wait-for-it")
+
+## Links para uso da aplicação
+- Dados de login para autenticação básica: user: admin e senha: admin
+- Criar novos pedidos: http://localhost:8080/#!/pedidos/novo
+- Listar Pedidos: http://localhost:8080/#!/pedidos
+- Swagger: http://localhost:8080/pedidos-api/swagger-ui.html
+
+## Comandos Docker que podem ser utéis
 - Remover todos os containers: docker rm $(docker ps -a -q) -f
 - Remover todos as imagens: docker rmi $(docker images -q) -f
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true)
-
-## Para fazer
-- Criar aquivo de propriedades para test e criar coposer para ambiente de testes
-- Inserir dados nas tabelas usando arquivo data.sql ao subir a apliacao
-- Ajustar testes unitários
-
-## Links úteis da aplicação
-
-- Dados de login: user: admin e senha: admin
-
-- Criar novos pedidos: http://localhost:8080/#!/pedidos/novo
-
-- Listar Pedidos: http://localhost:8080/#!/pedidos
-
-- Swagger: http://localhost:8080/swagger-ui/index.html
-
-- Console H2: http://localhost:8080/h2-console
-
-
-## Rodar o projeto via linha de comando
-
-- Ter o java 11 configurado no ambiente
-- Tem o mavem 3+ configurado no ambiente
-- Entrar na raiz do projeto e executar o comando `mvn clean install`
-- Entrar na pasta target que foi gerada
-- Abrir terminal nessa pasta
-- Executar comando `java -jar desafio-1.0.0-SNAPSHOT.jar`
-
-
-### Antes de iniciar o projeto, leia com atenção todos os tópicos.
 
 ## Proposta do desafio:
 
