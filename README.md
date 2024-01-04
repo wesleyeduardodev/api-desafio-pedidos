@@ -12,7 +12,7 @@
 
 ## Executar o Projeto API de Pedidos
 - Abrir um terminal na pasta raiz do projeto
-- Executar comando "mvn clean install -Dmaven.test.skip=true" para gerar o target do projeto. (Será gerado jar sem executar o testes unitarios - Alguns testes estão com falha após mudar o banco da aplicação de H2 para Postgres. Isso será resolvido em breve e os testes unitário e de integração voltarão a funcionar)
+- Executar comando "mvn clean install" para gerar o target do projeto.
 - Ainda com o terminal na raiz do projeto, executar o comando "docker compose -f docker-compose-dev.yml up -d" (Criar as imagens e subir todos os containers)
 - Obs: Caso ocorra problemas ao subir todos os container de forma simultanea basta subir um container de cada vez. (As vezes pode ocorrer problemas onde um container precisa de outro que ainda não subiu totalmente - Isso será resolvido posteriormente usando o recurso "wait-for-it")
 - Ao rodar a API de Fornecedores é necessário ter cadastrado pelo menos alguns fornecedores para um produto
