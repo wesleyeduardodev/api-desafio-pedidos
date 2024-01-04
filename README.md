@@ -6,8 +6,8 @@
 
 ## Configuração da API Externa de Fornecedores de um Produto
 - Realizar o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
-- Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
 - Abrir um terminal na pasta raiz do projeto
+- Entrar na raiz do projeto e executar "mvn clean install" para gerar o target do projeto
 - Executar o comando "docker build -t wesleyeduardodev/fornecedores-api:latest ." para gerar imagem da aplicação
 
 ## Executar o Projeto API de Pedidos
