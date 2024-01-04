@@ -22,7 +22,7 @@ spring:
       mode: always
 
   profiles:
-    active: dev
+    active: dev-ide
 
 basic:
   auth:

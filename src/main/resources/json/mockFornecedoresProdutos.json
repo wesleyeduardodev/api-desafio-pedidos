@@ -7,11 +7,11 @@
         "precos": [
           {
             "preco": 6.89,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 5.89,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           }
         ],
         "nome": "Fornecedor 1"
@@ -21,11 +21,11 @@
         "precos": [
           {
             "preco": 6.8,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 6.0,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           }
         ],
         "nome": "Fornecedor 2"
@@ -40,11 +40,11 @@
         "precos": [
           {
             "preco": 2.59,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 2.0,
-            "quantidade_minima": 5
+            "quantidadeMinima": 5
           }
         ],
         "nome": "Fornecedor 1"
@@ -54,11 +54,11 @@
         "precos": [
           {
             "preco": 2.59,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 1.99,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           }
         ],
         "nome": "Fornecedor 2"
@@ -73,11 +73,11 @@
         "precos": [
           {
             "preco": 4.5,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 3.1,
-            "quantidade_minima": 100
+            "quantidadeMinima": 100
           }
         ],
         "nome": "Fornecedor 1"
@@ -87,11 +87,11 @@
         "precos": [
           {
             "preco": 4.5,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           },
           {
             "preco": 4.1,
-            "quantidade_minima": 35
+            "quantidadeMinima": 35
           }
         ],
         "nome": "Fornecedor 2"
@@ -101,11 +101,11 @@
         "precos": [
           {
             "preco": 4.13,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           },
           {
             "preco": 4.1,
-            "quantidade_minima": 22
+            "quantidadeMinima": 22
           }
         ],
         "nome": "Fornecedor 3"
@@ -120,11 +120,11 @@
         "precos": [
           {
             "preco": 2.3,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 2.0,
-            "quantidade_minima": 100
+            "quantidadeMinima": 100
           }
         ],
         "nome": "Fornecedor 1"
@@ -139,11 +139,11 @@
         "precos": [
           {
             "preco": 5.99,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 5.0,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           }
         ],
         "nome": "Fornecedor 3"
@@ -158,7 +158,7 @@
         "precos": [
           {
             "preco": 5.0,
-            "quantidade_minima": 5
+            "quantidadeMinima": 5
           }
         ],
         "nome": "Fornecedor 3"
@@ -173,11 +173,11 @@
         "precos": [
           {
             "preco": 3.15,
-            "quantidade_minima": 1
+            "quantidadeMinima": 1
           },
           {
             "preco": 3.0,
-            "quantidade_minima": 10
+            "quantidadeMinima": 10
           }
         ],
         "nome": "Fornecedor 3"
