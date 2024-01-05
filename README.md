@@ -1,8 +1,8 @@
 
 ## Requisitos Gerais
-- Docker/WSL2 instalado e configurado no ambiente Windows
-- Java 17 configurado nas variáveis de ambiente do Windows
-- Maven 3+ configurado nas variáveis de ambiente do Windows
+- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
+- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
+- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Configuração da API Externa de Fornecedores de um Produto
 - Realizar o clone do projeto: https://github.com/wesleyeduardodev/fornecedores-api
