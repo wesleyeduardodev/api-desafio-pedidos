@@ -121,7 +121,3 @@ Caso nenhum fornecedor atenda a quantidade mínima de qualquer um dos produtos, 
 O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o fornecedor retornado pela API ainda não esteja cadastrado, o sistema deverá incluí-lo para poder vincular com o pedido.
 
 O sistema também deverá possuir uma rota para listar todos os pedidos criados até o momento.
-
-
-## Próximo passo do projeto que será desenvolvido
-- Criar novo profile/composer com perfil de prod e configurar deploy na AWS usando terraform.
